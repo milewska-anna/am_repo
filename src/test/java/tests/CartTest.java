@@ -7,7 +7,7 @@ import pageobjects.CartPage;
 public class CartTest extends BaseTest {
 
     @Test
-    public void shouldBeVisibleRemoveButtonWhenAddExistingProductToTheCartWhen(){
+    public void shouldBeVisibleRemoveButtonWhenAddedExistingProductToTheCart(){
         CartPage addToCart = new CartPage(driver);
         addToCart.addProductAndViewCart();
         Assertions.assertTrue(addToCart.isCorrectAddingProductToCartResult(),"Remove button was not found for a product with id=39." +
