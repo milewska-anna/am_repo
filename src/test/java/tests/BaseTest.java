@@ -26,7 +26,6 @@ public class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(7, TimeUnit.SECONDS);
         driver.navigate().to("http://34.94.151.29/");
         driver.manage().window().maximize();
-
     }
 
     @AfterEach

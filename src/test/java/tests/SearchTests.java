@@ -8,7 +8,7 @@ import pageobjects.SearchResultPage;
 public class SearchTests extends BaseTest{
 
     @Test
-    public void isCorrectBrittaniaCoinsSearchingResults(){
+    public void shouldDisplaySearchResultsForExistingBrittaniaCoins(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
         SearchResultPage searchResultsPage = new SearchResultPage(driver);
@@ -17,7 +17,7 @@ public class SearchTests extends BaseTest{
     }
 
     @Test
-    public void isCorrectBarsSearchingResults(){
+    public void shouldDisplaySearchResultsForExistingBars(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
         SearchResultPage searchResultsPage = new SearchResultPage(driver);

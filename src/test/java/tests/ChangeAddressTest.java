@@ -8,7 +8,7 @@ import pageobjects.LoginPage;
 public class ChangeAddressTest extends BaseTest{
 
     @Test
-    public void correctChangingRegisterUserAddress(){
+    public void shouldChangeAddressWhenUserIsRegistered(){
         LoginPage loginPage=new LoginPage(driver);
         loginPage.goTo();
         loginPage.loginUser("testowekonto@interia.pl","mko908lop@sa");

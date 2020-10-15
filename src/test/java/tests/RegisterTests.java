@@ -8,7 +8,7 @@ import pageobjects.RegisterPage;
 public class RegisterTests extends BaseTest{
 
     @Test
-    public void registrationWhenCorrectCredentialsAreProvided(){
+    public void shouldRegisterNewUserWhenCorrectMandatoryDataProvided(){
         LoginPage loginPage = new LoginPage(driver);
         RegisterPage registerPage = new RegisterPage(driver);
         loginPage.goTo().goToRegisterPage("@gmail.com");
@@ -17,7 +17,7 @@ public class RegisterTests extends BaseTest{
     }
 
     @Test
-    public void registrationFailedWhenUsernameIsNotProvided(){
+    public void shouldDisplayErrorMessageWhenUsernameIsNotProvided(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo().goToRegisterPage("@gmail.com");
         RegisterPage registerPage = new RegisterPage(driver);
@@ -26,7 +26,7 @@ public class RegisterTests extends BaseTest{
     }
 
     @Test
-    public void registrationFailedWhenUserEmailAddressIsNotProvided(){
+    public void shouldDisplayErrorMessageWhenUserEmailAddressIsNotProvided(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
         RegisterPage registerPage = new RegisterPage(driver);
@@ -34,7 +34,7 @@ public class RegisterTests extends BaseTest{
         Assertions.assertTrue(registerPage.emailAddressIsNotProvidedAlertDisplayed(),"Error message");
     }
     @Test
-    public void registrationFailedWhenUserPasswordIsNotProvided(){
+    public void shouldDisplayErrorMessageWhenUserPasswordIsNotProvided(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo().goToRegisterPage("@gmail.com");
         RegisterPage registerPage = new RegisterPage(driver);
@@ -42,7 +42,7 @@ public class RegisterTests extends BaseTest{
         Assertions.assertTrue(registerPage.passwordNotProvidedAlertDisplayed(),"Error message");
     }
     @Test
-    public void registrationFailedWhenCredentialsAreNotProvided(){
+    public void shouldDisplayErrorMessageWhenCredentialsAreNotProvided(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
         RegisterPage registerPage = new RegisterPage(driver);
@@ -51,7 +51,7 @@ public class RegisterTests extends BaseTest{
     }
 
     @Test
-    public void registrationFailedWhenIsProvidedExistingEmailAddress(){
+    public void shouldDisplayErrorMessageWhenIsProvidedExistingEmailAddress(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
         RegisterPage registerPage = new RegisterPage(driver);

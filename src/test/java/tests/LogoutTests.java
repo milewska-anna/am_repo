@@ -7,7 +7,7 @@ import pageobjects.LoginPage;
 public class LogoutTests extends BaseTest{
 
     @Test
-    public void correctLogout(){
+    public void shouldBeLogoutWhenSignOutButtonIsClicked(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo().loginUser("testowekonto@interia.pl", "mko908lop@sa");
         Assertions.assertTrue(loginPage.isUserLoggingCorrect(),"Your account page does not contain correct name");

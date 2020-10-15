@@ -8,7 +8,7 @@ import pageobjects.ShoppingPage;
 public class ShoppingTests extends BaseTest{
 
     @Test
-    public void positiveMakingOrderWhenAllCredentialsAreProvided(){
+    public void shouldPlaceAndOrderForAddedProductAndCredentialsProvided(){
         CartPage addToCart = new CartPage(driver);
         addToCart.addProductAndViewCart();
         Assertions.assertTrue(addToCart.isCorrectAddingProductToCartResult(),"Remove button was not found for a product with id=39." +
@@ -20,7 +20,7 @@ public class ShoppingTests extends BaseTest{
         Assertions.assertTrue(shoppingPage.isCorrectMakingOrderAlertDisplayed(),"The alert message is not correct");
     }
     @Test
-    public void negativeMakingOrderWhenFirstNameIsNotProvided(){
+    public void shouldDisplayErrorMessageWhenFirstNameIsNotProvided(){
         CartPage addToCart = new CartPage(driver);
         addToCart.addProductAndViewCart();
         Assertions.assertTrue(addToCart.isCorrectAddingProductToCartResult(),"Remove button was not found for a product with id=39." +
@@ -32,7 +32,7 @@ public class ShoppingTests extends BaseTest{
         Assertions.assertTrue(shoppingPage.firstNameIsRequiredAlertDisplayed(),"The alert message is not correct");
     }
     @Test
-    public void negativeMakingOrderWhenLastNameIsNotProvided(){
+    public void shouldDisplayErrorMessageWhenLastNameIsNotProvided(){
         CartPage addToCart = new CartPage(driver);
         addToCart.addProductAndViewCart();
         Assertions.assertTrue(addToCart.isCorrectAddingProductToCartResult(),"Remove button was not found for a product with id=39." +
@@ -44,7 +44,7 @@ public class ShoppingTests extends BaseTest{
         Assertions.assertTrue(shoppingPage.lastNameIsRequiredAlertDisplayed(),"The alert message is not correct");
     }
     @Test
-    public void negativeMakingOrderWhenStreetAddressIsNotProvided(){
+    public void shouldDisplayErrorMessageWhenStreetAddressIsNotProvided(){
         CartPage addToCart = new CartPage(driver);
         addToCart.addProductAndViewCart();
         Assertions.assertTrue(addToCart.isCorrectAddingProductToCartResult(),"Remove button was not found for a product with id=39." +
@@ -56,7 +56,7 @@ public class ShoppingTests extends BaseTest{
         Assertions.assertTrue(shoppingPage.addressIsRequiredAlertDisplayed(),"The alert message is not correct");
     }
     @Test
-    public void negativeMakingOrderWhenPostcodeIsNotProvided(){
+    public void shouldDisplayErrorMessageWhenPostcodeIsNotProvided(){
         CartPage addToCart = new CartPage(driver);
         addToCart.addProductAndViewCart();
         Assertions.assertTrue(addToCart.isCorrectAddingProductToCartResult(),"Remove button was not found for a product with id=39." +
@@ -69,7 +69,7 @@ public class ShoppingTests extends BaseTest{
     }
 
     @Test
-    public void negativeMakingOrderWhenCityIsNotProvided(){
+    public void shouldDisplayErrorMessageWhenCityIsNotProvided(){
         CartPage addToCart = new CartPage(driver);
         addToCart.addProductAndViewCart();
         Assertions.assertTrue(addToCart.isCorrectAddingProductToCartResult(),"Remove button was not found for a product with id=39." +
@@ -81,7 +81,7 @@ public class ShoppingTests extends BaseTest{
         Assertions.assertTrue(shoppingPage.cityIsRequiredAlertDisplayed(),"The alert message is not correct");
     }
     @Test
-    public void negativeMakingOrderWhenPhoneNumberIsNotProvided(){
+    public void shouldDisplayErrorMessageWhenPhoneNumberIsNotProvided(){
         CartPage addToCart = new CartPage(driver);
         addToCart.addProductAndViewCart();
         Assertions.assertTrue(addToCart.isCorrectAddingProductToCartResult(),"Remove button was not found for a product with id=39." +
@@ -94,7 +94,7 @@ public class ShoppingTests extends BaseTest{
     }
 
     @Test
-    public void negativeMakingOrderWhenEmailAddressNumberIsNotProvided(){
+    public void shouldDisplayErrorMessageWhenEmailAddressNumberIsNotProvided(){
         CartPage addToCart = new CartPage(driver);
         addToCart.addProductAndViewCart();
         Assertions.assertTrue(addToCart.isCorrectAddingProductToCartResult(),"Remove button was not found for a product with id=39." +

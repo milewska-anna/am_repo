@@ -9,7 +9,7 @@ public class CouponTests extends BaseTest{
 
 
     @Test
-    public void sendingCorrectCouponCod(){
+    public void shouldInputCouponWhenCorrectCouponCodIsProvided(){
         CartPage addToCart = new CartPage(driver);
         CouponPage couponPage = new CouponPage(driver);
         addToCart.addProductAndViewCart();
@@ -20,7 +20,7 @@ public class CouponTests extends BaseTest{
     }
 
     @Test
-    public void sendingIncorrectCouponCod(){
+    public void shouldDisplayErrorMessageWhenIncorrectCouponIsProvided(){
         CartPage addToCart = new CartPage(driver);
         CouponPage couponPage = new CouponPage(driver);
         addToCart.addProductAndViewCart();
@@ -30,7 +30,7 @@ public class CouponTests extends BaseTest{
         Assertions.assertTrue(couponPage.isIncorrectCouponCodeAlertDisplayed(),"Message is not correct");
     }
     @Test
-    public void notSendingCouponCod(){
+    public void shouldDisplayErrorMessageWhenCouponCodeIsNotProvided(){
         CartPage addToCart = new CartPage(driver);
         CouponPage couponPage = new CouponPage(driver);
         addToCart.addProductAndViewCart();
